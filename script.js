@@ -56,19 +56,19 @@ function gameOver() {
 // function that allows the player two attack button to reduce the player two's
 // health
 function attackPlayerTwo() {
-    // compartmentalized function that will switch the player 2 attack button to inactive
-    // and player 1 attack button to active using DOM manipulation
+    // compartmentalized function that will switch the player 1 attack button to inactive
+    // and player 2 attack button to active using DOM manipulation
     // this also DISABLES the button, meaning they are not interactable
     function changeButtonStatus() {
-        let playerTwoAttackButton = document.getElementById("playerTwoAttack");
-        playerTwoAttackButton.disabled = true;
-        playerTwoAttackButton.classList.add("inactive");
-        playerTwoAttackButton.classList.remove("active");
-
         let playerOneAttackButton = document.getElementById("playerOneAttack");
-        playerOneAttackButton.disabled = false;
-        playerOneAttackButton.classList.add("active");
-        playerOneAttackButton.classList.remove("inactive");
+        playerOneAttackButton.disabled = true;
+        playerOneAttackButton.classList.add("inactive");
+        playerOneAttackButton.classList.remove("active");
+
+        let playerTwoAttackButton = document.getElementById("playerTwoAttack");
+        playerTwoAttackButton.disabled = false;
+        playerTwoAttackButton.classList.add("active");
+        playerTwoAttackButton.classList.remove("inactive");
     }
 
     // commpartmentalized function that changes the player 1's sprite using the array
